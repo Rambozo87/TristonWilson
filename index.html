@@ -1,0 +1,302 @@
+<html>
+    <head>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TNPPG8BL');</script>
+        <!-- End Google Tag Manager -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Jackson Oswalt</title>
+        <link rel="stylesheet" type="text/css" href="assets/index.css">
+
+        <link rel="icon" type="image/png" href="assets/images/icon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+        <meta property="og:title" content="Jackson Oswalt Personal Site">
+        <meta property="og:description" content="Project Portfolio">
+        <meta property="og:image" content="https://jacksonoswalt.com/assets/images/thumb.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Home">
+        <meta name="twitter:description" content="Jackson Oswalt Personal Site">
+        <meta name="twitter:image" content="https://jacksonoswalt.com/assets/images/thumb.png">
+
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0R4J12LCF9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0R4J12LCF9');
+
+        // Wait for all content to load before fading in
+        window.addEventListener('load', function() {
+            Promise.all([
+                // Wait for all images to load
+                ...Array.from(document.images).map(img => {
+                    if (img.complete) return Promise.resolve();
+                    return new Promise(resolve => { img.onload = img.onerror = resolve; });
+                }),
+                // Wait for all stylesheets to load
+                ...Array.from(document.styleSheets).map(stylesheet => {
+                    if (stylesheet.cssRules.length > 0) return Promise.resolve();
+                    return new Promise(resolve => {
+                        stylesheet.onload = resolve;
+                        stylesheet.onerror = resolve;
+                    });
+                }),
+                // Wait for all scripts to load
+                ...Array.from(document.scripts).map(script => {
+                    if (script.readyState === 'complete') return Promise.resolve();
+                    return new Promise(resolve => {
+                        script.onload = resolve;
+                        script.onerror = resolve;
+                    });
+                })
+            ]).then(() => {
+                // All content is loaded, now add the fade-in effect
+                const elements = document.querySelectorAll('body *:not(.gradient-blur)');
+                elements.forEach(element => {
+                    element.classList.add('fade-in');
+                });
+            });
+        });
+    </script>
+
+    <body>
+        <script>
+            window.addEventListener('load', function() {
+                // Check if all images and other resources are loaded
+                Promise.all(Array.from(document.images).map(img => {
+                    if (img.complete) return Promise.resolve();
+                    return new Promise(resolve => { img.onload = img.onerror = resolve; });
+                })).then(() => {
+                    // All images are loaded, now add the fade-in effect
+                    const elements = document.querySelectorAll('body *:not(.gradient-blur)');
+                    elements.forEach(element => {
+                        element.classList.add('fade-in');
+                    });
+                });
+            });
+        </script>
+        <div class="gradient-blur" style="inset: 0 0 auto 0; transform: scaleY(-1);">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="header"></div>
+
+        <div class="segment">
+            <img src="assets/images/pfp.jpg" id="pfp" alt="Jackson Oswalt">
+            <div style="margin-top: 20px;">
+                Hey, I'm Jackson.
+                <br><br
+                <span style="color: rgba(0, 0, 0, 0.75);">I've been a builder for <span id="yearsActive"></span> years.</span>
+                <script>
+                    function calculateYears() {
+                        const startDate = new Date('January 19, 2013');
+                        const now = new Date();
+                        const differenceInMilliseconds = now - startDate;
+                        const yearsActive = differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+                        document.getElementById('yearsActive').textContent = yearsActive.toFixed(10);
+                    }
+                    calculateYears();
+                    setInterval(calculateYears, 10);
+                </script>
+                <br><br>
+                At 12 years old, I built a <a href="https://www.foxnews.com/science/teen-builds-working-nuclear-fusion-reactor-in-memphis-home" target="_blank" style="text-decoration: underline;">nuclear fusion reactor</a>.
+                <br><br>
+                Currently, I'm building new physical computing interfaces at <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>.
+            </div>
+
+            <div id="downarrow" class="bounce">
+                <img src="assets/images/icons/downarrow.svg" alt="Down arrow" width="24" height="24">
+            </div>
+            <style>
+                @keyframes bounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+                .bounce {
+                    animation: bounce 1.5s ease-in-out infinite;
+                }
+            </style>
+
+        </div class="segment">
+        <div class="segment" style="height: auto;">
+
+            <a href="fusion/index.html" class="position" style="margin-top: 0px;">
+                <div class="positionLeft">
+
+                    <img class="mode-sensitive" data-name="fusion" src="assets/images/icons/fusion.svg">
+                
+                    <div class="line"></div>
+
+                </div>
+                <div class="positionRight">
+
+                    <span style="font-weight: 600; line-height: 15px;">Nuclear Fusion Reactor</span><span style="color: rgba(0, 0, 0, 0.5); font-weight: 400; line-height: 15px;"> · 2017-2020</span>
+
+                    <div class="positionAttributes">
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="research" src="assets/images/icons/research.svg"><div>Research</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="hardware" src="assets/images/icons/hardware.svg"><div>Hardware</div>
+                        </div>
+
+                    </div>
+
+                    <div class="positionImages">
+
+                        <img src="assets/images/fusion/1.png" id="fusion1">
+                        <img src="assets/images/fusion/2.png" id="fusion2">
+                        <img src="assets/images/fusion/3.png" id="fusion3">
+    
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="vr/index.html" class="position">
+                <div class="positionLeft">
+
+                    <img class="mode-sensitive" data-name="vr" src="assets/images/icons/vr.svg" style="width: 49px; padding-top: 6px; padding-bottom: 6px;">
+
+                    <div class="line"></div>
+
+                </div>
+                <div class="positionRight">
+
+                    <span style="font-weight: 600; line-height: 15px;">Virtual Reality</span><span style="color: rgba(0, 0, 0, 0.5); font-weight: 400; line-height: 15px;"> · 2022-2023</span>
+
+                    <div class="positionAttributes">
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="research" src="assets/images/icons/research.svg"><div>Research</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="hardware" src="assets/images/icons/hardware.svg"><div>Hardware</div>
+                        </div>
+
+                    </div>
+
+                    <div class="positionImages">
+
+                        <img src="assets/images/vr/1.png" id="vr1">
+                        <img src="assets/images/vr/2.png" id="vr2">
+                        <img src="assets/images/vr/3.png" id="vr3">
+
+                    </div>
+
+                </div>                
+            </a>
+
+            <a href="tone/index.html" class="position">
+                <div class="positionLeft">
+
+                    <img class="mode-sensitive" data-name="tone" src="assets/images/icons/tone.svg">
+                    <div class="line"></div>
+
+                </div>
+                <div class="positionRight">
+
+                    <span style="font-weight: 600; line-height: 15px;">Contextual Computing</span><span style="color: rgba(0, 0, 0, 0.5); font-weight: 400; line-height: 15px;"> · 2023-2024</span>
+
+                    <div class="positionAttributes">
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="startup" src="assets/images/icons/startup.svg"><div>Startup</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="founder" src="assets/images/icons/founder.svg"><div>Founder</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="hardware" src="assets/images/icons/hardware.svg"><div>Hardware</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="ai" src="assets/images/icons/ai.svg"><div>AI</div>
+                        </div>
+
+                    </div>
+
+                    <div class="positionImages">
+
+                        <img src="assets/images/tone/1.png" id="tone1">
+                        <img src="assets/images/tone/2.png" id="tone2">
+                        <img src="assets/images/tone/3.png" id="tone3">
+
+                    </div>
+
+                </div>                
+            </a>
+
+            <div class="position" style="background-color: rgba(255, 255, 255, 0); border: 0px; pointer-events: none; margin-top: 50px;">
+                <div class="positionLeft">
+
+                    <img src="assets/images/icons/midjourney.svg">
+
+                </div>
+                <div class="positionRight" id="positionLast">
+
+                    <div class="activeTitle">
+                        
+                        <span style="font-weight: 600; line-height: 15px; letter-spacing: 0.0235em; margin-right: 5px;">Midjourney</span><span style="color: rgba(0, 0, 0, 0.5); font-weight: 400; line-height: 15px;"> · 2024</span>
+                    
+                        <div class="active">
+                            <div class="activeLight"></div>
+                            <div class="activeRadiate"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="positionAttributes">
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="startup" src="assets/images/icons/startup.svg"><div>Startup</div>
+                        </div>
+
+                        <div class="attributes">
+                            <img class="mode-sensitive" data-name="employee" src="assets/images/icons/employee.svg"><div>Employee</div>
+                        </div>
+
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <!-- Start of Blur Effect -->
+        <div class="gradient-blur">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- End of Blur Effect -->
+
+    </body>
+</html>
